@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</title>
+</head>
+<body>
+<script>
+    let numbers = [1,2,7,8,9,19,15,16,17,18];
+    let max = numbers[0];
+    let index;
+    for (let i = 0; i < numbers.length; i++) {
+        if( numbers[i] > max) {
+            max = numbers[i];
+            index = i ;
+        }
+    }
+    document.write(max + "<br>");
+    document.write(count);
+</script>
+</body>
+</html>

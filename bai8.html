@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let numbersLength = +prompt("nhap vao do dai cua mang");
+    for (let i = 0; i < numbersLength; i++) {
+        numbers[i] = +prompt("nhap phan tu " + (i+1) + "trong mang");
+    }
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length - 1 - i; j++) {
+            if (numbers[j] < numbers[j + 1]) {
+                // Hoán đổi vị trí của hai phần tử
+                let temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+    }
+
+    document.write(numbers);
+    //cách 2
+    // let numbers = [];
+    // const numbersLength = 10;
+    //
+    // // Nhập các phần tử của mảng
+    // for (let i = 0; i < numbersLength; i++) {
+    //     numbers[i] = +prompt("Nhập phần tử " + (i + 1) + " trong mảng:");
+    // }
+    //
+    // // Sắp xếp mảng theo thứ tự giảm dần
+    // numbers.sort(function(a, b) {
+    //     return b - a;
+    // });
+    //
+    // // Hiển thị mảng đã được sắp xếp
+    // console.log("Mảng sau khi sắp xếp theo thứ tự giảm dần:", numbers);
+    // document.write("Mảng sau khi sắp xếp theo thứ tự giảm dần: " + numbers.join(", "));
+
+</script>
+</body>
+</html>

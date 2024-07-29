@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let numbersLength = +prompt("nhap vao do dai cua mang")
+    for (let i = 0; i < numbersLength; i++) {
+        numbers[i] = +prompt("nhap phan tu " + (i+1) + " trong mang");
+    }
+    let V = +prompt("nhap so V can tim trong mang");
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === V) {
+            count++;
+        }
+    }
+
+    if (count>=1) {
+        document.write("V is in the array");
+    } else {
+        document.write("V is not in the array");
+    }
+
+    // Nhập phần tử thứ 1: 10
+    // Nhập phần tử thứ 2: 20
+    // Nhập phần tử thứ 3: 30
+    // Nhập phần tử thứ 4: 40
+    // Nhập phần tử thứ 5: 50
+    // Lần lặp 1 (i = 0): numbers[0] là 10, không bằng 30, tiếp tục vòng lặp.
+    //     Lần lặp 2 (i = 1): numbers[1] là 20, không bằng 30, tiếp tục vòng lặp.
+    //     Lần lặp 3 (i = 2): numbers[2] là 30, bằng 30, gán found = true và thoát khỏi vòng lặp.
+
+</script>
+</body>
+</html>

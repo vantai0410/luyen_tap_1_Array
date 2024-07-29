@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let numbersLength = +prompt("nhap vao do dai cua mang")
+    for (let i = 0; i < numbersLength; i++) {
+        numbers[i] = +prompt("nhap phan tu " + (i+1) + "trong mang");
+    }
+    let V = +prompt("nhap so V can tim trong mang");
+    let foundIndex = -1;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === V) {
+            foundIndex = i;
+            break;
+        }
+    }
+// // Sử dụng foundIndex:-1,0 Khi bạn cần biết vị trí chính xác của V trong mảng để thực hiện các thao tác như xóa, thay thế, hoặc xử lý đặc biệt dựa trên vị trí.
+//     Sử dụng found: true false Khi bạn chỉ cần biết V có tồn tại trong mảng hay không, mà không cần biết vị trí chính xác của nó.
+    if (foundIndex !== -1) {
+        for (let i = foundIndex ; i < numbers.length -1 ; i++) {
+            numbers[i] = numbers[i+1];
+        }
+        numbers[numbers.length - 1] = 0;
+        document.write("Removed " + V + " 5from the array " + numbers);
+    } else {
+        document.write( V + " is not in the array");
+    }
+    // i = 2:
+    // numbers[2] = numbers[3] => numbers[2] = 40
+    // Mảng: [10, 20, 40, 40, 50, 60, 70, 80, 90, 100]
+    // i = 3:
+    // numbers[3] = numbers[4] => numbers[3] = 50
+    // Mảng: [10, 20, 40, 50, 50, 60, 70, 80, 90, 100]
+    // i = 4:
+    // numbers[4] = numbers[5] => numbers[4] = 60
+    // Mảng: [10, 20, 40, 50, 60, 60, 70, 80, 90, 100]
+    // i = 5:
+    // numbers[5] = numbers[6] => numbers[5] = 70
+    // Mảng: [10, 20, 40, 50, 60, 70, 70, 80, 90, 100]
+    // i = 6:
+    // numbers[6] = numbers[7] => numbers[6] = 80
+    // Mảng: [10, 20, 40, 50, 60, 70, 80, 80, 90, 100]
+    // i = 7:
+    // numbers[7] = numbers[8] => numbers[7] = 90
+    // Mảng: [10, 20, 40, 50, 60, 70, 80, 90, 90, 100]
+    // i = 8:
+    // numbers[8] = numbers[9] => numbers[8] = 100
+    // Mảng: [10, 20, 40, 50, 60, 70, 80, 90, 100, 100]
+    // Tránh truy cập ngoài phạm vi
+    // Khi i = 9, numbers[i + 1] sẽ là numbers[10],
+    // điều này vượt ra ngoài phạm vi của mảng (vì mảng có chỉ số từ 0 đến 9 cho 10 phần tử).
+    // Do đó, vòng lặp for được thiết lập với điều kiện i < numbers.length - 1 để đảm bảo rằng chỉ số i + 1 luôn nằm trong phạm vi hợp lệ của mảng.
+    //cách 2:
+    // let arr = [8, 1, 20, 5, 27, 19, 97, 29, 6, 12];
+    // let find = +prompt("Nhập số muốn kiểm tra");
+    // document.write("Mảng ban đầu là: "+arr + "<br>")
+    // let count=0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (find === arr[i]) {
+    //         arr.splice(i,1);
+    //         arr.push(0);
+    //     }
+    // }
+    // document.write("Chuỗi sau khi check là: "+arr)
+</script>
+</body>
+</html>

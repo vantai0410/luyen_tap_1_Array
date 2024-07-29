@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<script>
+    let numbers = [5, 8, 2, 9, 3, 10, 6];
+    for (let i = 0; i < numbers.length/2; i++) {
+        let temp = numbers[i];
+            numbers[i] = numbers[numbers.length - i - 1];
+            numbers[numbers.length - i - 1] = temp;
+    }
+    // // ví dụ 1. Ban đầu:
+    // numbers = [5, 8, 2, 9, 3]
+    // numbers.length = 5 (số lượng phần tử trong mảng)
+    // 2. Vòng lặp lần 1 (i = 0):
+    // temp = numbers[0] => temp = 5
+    // Tính numbers.length - 1 - i:
+    // numbers.length = 5
+    // numbers.length - 1 = 4
+    // numbers.length - 1 - i = 4 - 0 = 4
+    // [0] = arr[4] => arr[0] = 3
+    // arr[4] = temp => arr[4] = 5
+    // Mảng sau lần lặp này: [3, 8, 2, 9, 5]
+    document.write(numbers);
+</script>
+</body>
+</html>

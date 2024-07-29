@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử </title>
+</head>
+<body>
+<script>
+    debugger;
+    let numbers = [5, 8, 2, 9, 3, 10, 6];
+    let max = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        if( numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+
+    }
+    let avarage = sum/numbers.length;
+    // document.write("gia tri lon nhat trong mang "+ max + "<br>");
+    // document.write("gia tri trung binh trong mang " + avarage);
+    console.log(max);
+    console.log(avarage);
+</script>
+</body>
+</html>
